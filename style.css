@@ -10,12 +10,13 @@
 }
 
 body {
+    margin: 0;
     background-image: url("./image/LuminaWalls_15_05_25_01-05.png");
-    background-position: center;
     background-size: cover;
-    height: 100vh;
-    width: 100%;
     background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
     color: white;
     font-family: "JetBrainsMonoNerdFont";
 }
@@ -26,6 +27,9 @@ nav {
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 nav img {
@@ -43,17 +47,51 @@ nav img {
     text-decoration: none;
 }
 
+.pfp-container {
+    border-bottom: solid 2px white;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.pfp {
+    display: block;
+    margin-top: 5rem;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
 .content {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(32, 32, 32, 0.3);
-    backdrop-filter: blur(10px);
     justify-content: center;
     align-items: center;
-    padding: 0.9rem;
-    border-radius: 0.6rem;
-    position: absolute;
-    top: 20%;
-    bottom: 20%;
-    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.glass-card:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.glass-card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(32, 32, 32, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.glass-card h2 {
+    margin-bottom: 10px;
+}
+
+.glass-card p {
+    font-size: 14px;
 }
